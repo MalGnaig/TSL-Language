@@ -1,0 +1,1215 @@
+
+
+Tile tile;
+tile = read("tile.tl");
+
+Tile tile_q;
+tile_q = blank(scale(tile, 100));
+
+Int size;
+size = getCol(tile_q);
+
+Int x;
+Int y;
+x = 0;
+y = 0;
+
+// -------------------
+Tile tile_helper;
+tile_helper = scale(tile, 2);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile2;
+tile2 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile2, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 4);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile4;
+tile4 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile4, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 6);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile6;
+tile6 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile6, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 8);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile8;
+tile8 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile8, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 10);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile10;
+tile10 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile10, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 12);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile12;
+tile12 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile12, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 14);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile14;
+tile14 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile14, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 16);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile16;
+tile16 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile16, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 18);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile18;
+tile18 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile18, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 20);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile20;
+tile20 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile20, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 22);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile22;
+tile22 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile22, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 24);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile24;
+tile24 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile24, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 26);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile26;
+tile26 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile26, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 28);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile28;
+tile28 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile28, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 30);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile30;
+tile30 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile30, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 32);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile32;
+tile32 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile32, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 34);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile34;
+tile34 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile34, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 36);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile36;
+tile36 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile36, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 38);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile38;
+tile38 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile38, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 40);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile40;
+tile40 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile40, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 42);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile42;
+tile42 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile42, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 44);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile44;
+tile44 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile44, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 46);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile46;
+tile46 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile46, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 48);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile48;
+tile48 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile48, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 50);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile50;
+tile50 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile50, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 52);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile52;
+tile52 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile52, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 54);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile54;
+tile54 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile54, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 56);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile56;
+tile56 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile56, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 58);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile58;
+tile58 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile58, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 60);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile60;
+tile60 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile60, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 62);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile62;
+tile62 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile62, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 64);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile64;
+tile64 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile64, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 66);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile66;
+tile66 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile66, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 68);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile68;
+tile68 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile68, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 70);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile70;
+tile70 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile70, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 72);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile72;
+tile72 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile72, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 74);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile74;
+tile74 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile74, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 76);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile76;
+tile76 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile76, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 78);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile78;
+tile78 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile78, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 80);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile80;
+tile80 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile80, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 82);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile82;
+tile82 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile82, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 84);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile84;
+tile84 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile84, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 86);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile86;
+tile86 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile86, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 88);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile88;
+tile88 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile88, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 90);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile90;
+tile90 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile90, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 92);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile92;
+tile92 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile92, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 94);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile94;
+tile94 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile94, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 96);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile96;
+tile96 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile96, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 98);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile98;
+tile98 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile98, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+Tile tile_helper;
+tile_helper = scale(tile, 100);
+Int size_of_tile_helper;
+size_of_tile_helper = getCol(tile_helper);
+Tile tile100;
+tile100 = blank(tile_q);
+Int offset;
+offset = (size - size_of_tile_helper) / 2;
+
+x = 0;
+y = 0;
+while(x < size_of_tile_helper) {
+    while(y < size_of_tile_helper) {
+        Int p;
+        p = access(tile_helper, x, y);
+        modify(tile100, x + offset, y + offset, p);
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+
+// --------------
+
+x = 0;
+y = 0;
+while(x < size) {
+    while(y < size) {
+        Int pixel_2;
+        Int pixel_4;
+        Int pixel_6;
+        Int pixel_8;
+        Int pixel_10;
+        Int pixel_12;
+        Int pixel_14;
+        Int pixel_16;
+        Int pixel_18;
+        Int pixel_20;
+        Int pixel_22;
+        Int pixel_24;
+        Int pixel_26;
+        Int pixel_28;
+        Int pixel_30;
+        Int pixel_32;
+        Int pixel_34;
+        Int pixel_36;
+        Int pixel_38;
+        Int pixel_40;
+        Int pixel_42;
+        Int pixel_44;
+        Int pixel_46;
+        Int pixel_48;
+        Int pixel_50;
+        Int pixel_52;
+        Int pixel_54;
+        Int pixel_56;
+        Int pixel_58;
+        Int pixel_60;
+        Int pixel_62;
+        Int pixel_64;
+        Int pixel_66;
+        Int pixel_68;
+        Int pixel_70;
+        Int pixel_72;
+        Int pixel_74;
+        Int pixel_76;
+        Int pixel_78;
+        Int pixel_80;
+        Int pixel_82;
+        Int pixel_84;
+        Int pixel_86;
+        Int pixel_88;
+        Int pixel_90;
+        Int pixel_92;
+        Int pixel_94;
+        Int pixel_96;
+        Int pixel_98;
+        Int pixel_100;
+
+        pixel_2 = access(tile2, x, y);
+        pixel_4 = access(tile4, x, y);
+        pixel_6 = access(tile6, x, y);
+        pixel_8 = access(tile8, x, y);
+        pixel_10 = access(tile10, x, y);
+        pixel_12 = access(tile12, x, y);
+        pixel_14 = access(tile14, x, y);
+        pixel_16 = access(tile16, x, y);
+        pixel_18 = access(tile18, x, y);
+        pixel_20 = access(tile20, x, y);
+        pixel_22 = access(tile22, x, y);
+        pixel_24 = access(tile24, x, y);
+        pixel_26 = access(tile26, x, y);
+        pixel_28 = access(tile28, x, y);
+        pixel_30 = access(tile30, x, y);
+        pixel_32 = access(tile32, x, y);
+        pixel_34 = access(tile34, x, y);
+        pixel_36 = access(tile36, x, y);
+        pixel_38 = access(tile38, x, y);
+        pixel_40 = access(tile40, x, y);
+        pixel_42 = access(tile42, x, y);
+        pixel_44 = access(tile44, x, y);
+        pixel_46 = access(tile46, x, y);
+        pixel_48 = access(tile48, x, y);
+        pixel_50 = access(tile50, x, y);
+        pixel_52 = access(tile52, x, y);
+        pixel_54 = access(tile54, x, y);
+        pixel_56 = access(tile56, x, y);
+        pixel_58 = access(tile58, x, y);
+        pixel_60 = access(tile60, x, y);
+        pixel_62 = access(tile62, x, y);
+        pixel_64 = access(tile64, x, y);
+        pixel_66 = access(tile66, x, y);
+        pixel_68 = access(tile68, x, y);
+        pixel_70 = access(tile70, x, y);
+        pixel_72 = access(tile72, x, y);
+        pixel_74 = access(tile74, x, y);
+        pixel_76 = access(tile76, x, y);
+        pixel_78 = access(tile78, x, y);
+        pixel_80 = access(tile80, x, y);
+        pixel_82 = access(tile82, x, y);
+        pixel_84 = access(tile84, x, y);
+        pixel_86 = access(tile86, x, y);
+        pixel_88 = access(tile88, x, y);
+        pixel_90 = access(tile90, x, y);
+        pixel_92 = access(tile92, x, y);
+        pixel_94 = access(tile94, x, y);
+        pixel_96 = access(tile96, x, y);
+        pixel_98 = access(tile98, x, y);
+        pixel_100 = access(tile100, x, y);
+
+        Int sum;
+
+        sum = pixel_2 + pixel_4 + pixel_6 + pixel_8 + pixel_10 + pixel_12 + pixel_14 + pixel_16 + pixel_18 + pixel_20 + pixel_22 + pixel_24 + pixel_26 + pixel_28 + pixel_30 + pixel_32 + pixel_34 + pixel_36 + pixel_38 + pixel_40 + pixel_42 + pixel_44 + pixel_46 + pixel_48 + pixel_50 + pixel_52 + pixel_54 + pixel_56 + pixel_58 + pixel_60 + pixel_62 + pixel_64 + pixel_66 + pixel_68 + pixel_70 + pixel_72 + pixel_74 + pixel_76 + pixel_78 + pixel_80 + pixel_82 + pixel_84 + pixel_86 + pixel_88 + pixel_90 + pixel_92 + pixel_94 + pixel_96 + pixel_98 + pixel_100;
+
+
+        if(sum == 1) {
+            modify(tile_q, x, y, 1);
+        } else {
+            modify(tile_q, x, y, 0);
+        }
+        y = y + 1;
+    }
+    y = 0;
+    x = x + 1;
+}
+
+
+Tile tile_q_y;
+tile_q_y = reflectY(tile_q);
+
+Tile tile_q_x;
+tile_q_x = reflectX(tile_q);
+
+Tile tile_q_x_y;
+tile_q_x_y = reflectY(tile_q_x);
+
+Tile row1;
+row1 = alternate(tile_q, tile_q_y, 0);
+
+Tile row2;
+row2 = alternate(tile_q_x, tile_q_x_y, 0);
+
+Tile res;
+res = stack(row1, row2);
+
+write(tile_q);
+
+write(tile26, "tile26");
+write(tile10, "tile10");

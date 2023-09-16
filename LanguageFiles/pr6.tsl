@@ -1,0 +1,73 @@
+Tile t1;
+Tile t2;
+Tile t3;
+Tile t4b;
+Tile row1;
+Tile row2;
+Tile row3;
+Tile rectangletile1;
+Tile rectangletile2;
+Tile rectangletile3;
+Tile stack1;
+Tile stack2;
+Tile stack3;
+Tile blankRec1;
+Tile blankRec2;
+Tile blankRec3;
+Tile blankRec4;
+Tile topRow1;
+Tile topRow1p5;
+Tile topRow2;
+Tile topRow2p5;
+Tile bottomRow1;
+Tile bottomRow1p5;
+Tile bottomRow2;
+Tile bottomRow2p5;
+Tile top;
+Tile bottom;
+Tile fullBody;
+
+t1 = read("tile1.tl");
+t2 = read("tile2.tl");
+t3 = read("tile3.tl");
+t4b = blank(t1);
+
+blankRec1 = alternate(alternate(t4b, t4b, 0), t1, 0);
+blankRec2 = alternate(alternate(t4b, t2, 0), t3, 0);
+blankRec3 = alternate(alternate(t1, t2, 0), t4b, 0);
+blankRec4 = alternate(alternate(t3, t4b, 0), t4b, 0);
+rectangletile1 = alternate(alternate(t3, t1, 0), t2, 0);
+rectangletile2 = alternate(alternate(t2, t3, 0), t1, 0);
+rectangletile3 = alternate(alternate(t1, t2, 0), t3, 0);
+
+//blankRec1 = 3tiles long, rec2 is 3 tiles long, 3, 3
+topRow1 = alternate(rectangletile2, rectangletile2, 8);
+topRow1p5 = alternate(blankRec1, alternate(topRow1,rectangletile2, 0), 0);
+topRow2 = alternate(rectangletile3, rectangletile3, 8);
+topRow2p5 = alternate(blankRec2, alternate(topRow2,rectangletile3, 0), 0);
+bottomRow1 = alternate(rectangletile3, rectangletile3, 8);
+bottomRow1p5 = alternate(alternate(bottomRow1,rectangletile3,0), blankRec3, 0);
+bottomRow2 = alternate(rectangletile1, rectangletile1, 8);
+bottomRow2p5 = alternate(alternate(bottomRow2,rectangletile1,0), blankRec4, 0);
+
+row1 = alternate(rectangletile1, rectangletile1, 9);
+row2 = alternate(rectangletile2, rectangletile2, 9);
+row3 = alternate(rectangletile3, rectangletile3, 9);
+
+top = stack(topRow1p5, topRow2p5);
+bottom = stack(bottomRow1p5, bottomRow2p5);
+stack1 = stack(row1, row2);
+stack2 = stack(row3, row1);
+stack3 = stack(row2, row3);
+
+Tile body;
+Int i;
+i = 0;
+while ( i < 9 ){
+    body = stack(body, stack(stack (stack1, stack2), stack3));
+    i = i + 1;
+}
+
+fullBody = stack(top, stack(body, stack(stack1,bottom)));
+
+write(fullBody);

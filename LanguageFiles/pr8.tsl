@@ -1,0 +1,108 @@
+Tile t1;
+Tile t2;
+Tile t1Flipped;
+Tile t2Flipped;
+Tile doubleT2;
+Tile doubleT2Flipped;
+
+Tile sectionOne;
+//sectionOne Part: A
+Tile s1Aa;
+Tile s1Ab;
+Tile s1A;
+//sectionOne Part: B
+Tile s1Ba;
+Tile s1B;
+
+Tile sectionTwo;
+Tile s2A;
+Tile s2B;
+
+
+Tile sectionThree;
+Tile s3Aa;
+Tile s3A;
+Tile s3B;
+
+Tile sectionFour;
+Tile s4A;
+
+Tile pattern;
+Tile cPattern;
+Tile rowCPattern;
+
+Tile flippedRowCPattern;
+Tile result;
+
+Int amountOfCs;
+
+
+t1 = read("tile1.tl"); //Blue
+t2 = read("tile2.tl"); //Green
+
+t1Flipped = reflectX(t1);
+t2Flipped = reflectX(t2);
+
+doubleT2 = scale(t2, 2);
+doubleT2Flipped = reflectX(doubleT2);
+
+//sectionOne
+s1Aa = stack(t1Flipped, t1Flipped);
+s1Ab = stack(t2, t2Flipped);
+s1A = stack(stack(s1Aa, s1Ab), t1);
+
+s1Ba = alternate(t1Flipped, t2Flipped, 0);
+s1B = stack(stack(s1Ba, doubleT2), doubleT2Flipped);
+
+sectionOne = alternate(s1A, s1B, 0);
+
+//write(sectionOne, "outputs/sectionOne.tl");
+
+//sectionTwo
+s2A = stack(t2Flipped, t1);
+s2B = alternate(doubleT2Flipped, doubleT2Flipped, 0);
+sectionTwo = alternate(s2B, s2A, 0);
+
+//write(sectionTwo, "outputs/sectionTwo.tl");
+
+//sectionThree
+s3Aa = stack(t2Flipped, t1);
+s3A = alternate(s3Aa, doubleT2Flipped, 0);
+s3B = alternate(alternate(t1, t1, 0), t2, 0);
+sectionThree = stack(s3A, s3B);
+
+//write(sectionThree, "outputs/sectionThree.tl");
+
+//sectionFour
+s4A = alternate(t1, t1, 0);
+sectionFour = stack(s4A, doubleT2);
+
+//write(sectionFour, "outputs/sectionFour.tl");
+
+pattern = alternate(sectionOne, stack( sectionTwo, alternate(sectionThree, sectionFour, 0) ), 0);
+
+//write(pattern, "pattern.tl");
+
+cPattern = stack(pattern, reflectX(pattern));
+
+//write(cPattern, "outputs/cPattern.tl");
+
+amountOfCs = 0;
+rowCPattern = cPattern;
+
+while(amountOfCs < 3){
+	rowCPattern = stack(rowCPattern, cPattern);
+	amountOfCs = amountOfCs + 1;
+}
+
+flippedRowCPattern = reflectY(rowCPattern);
+result = alternate(alternate(rowCPattern, flippedRowCPattern, 1), rowCPattern, 0);
+
+write(result);
+
+
+
+
+
+
+

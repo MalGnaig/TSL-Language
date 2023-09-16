@@ -1,0 +1,221 @@
+Tile blankTile;
+Tile placeHolder;
+
+Tile row;
+Tile triangle;
+Tile leftTriangle;
+Tile rightTriangle;
+Tile upTriangle;
+Tile downTriangle;
+
+Tile blankArena;
+
+Tile result;
+
+Int i;
+Int x;
+Int y;
+
+Int val;
+Int newVal;
+
+
+///////////////////////////////////////////////////// Making the blueprint //////////////////////////////////
+
+blankTile = make_tile(1, 1);
+
+row = alternate(blankTile, alternate(blankTile, blankTile, 49), 0);
+triangle = row;
+
+i = 0;
+while (i < 100){
+	triangle = stack(triangle, row);
+	i = i + 1;
+}
+
+blankArena = triangle;
+
+while(y < 101){
+	x = 0;
+	while(x < 101){
+		if (x*2 < y) {
+			placeHolder = access(triangle, x, y);
+			modify(triangle, x, y, neg(placeHolder));
+		}
+
+		x = x + 1;
+	}
+
+	y = y + 1;
+}
+
+
+leftTriangle = triangle;
+rightTriangle = reflectY(leftTriangle);
+upTriangle = rotate(rotate(rotate(rightTriangle)));
+downTriangle = reflectX(upTriangle);
+
+result = leftTriangle;
+
+x = 0;
+y = 0;
+
+while(y < 101){
+	x = 0;
+
+	while(x < 101){
+
+		val = access(result, x, y);
+		newVal = access(upTriangle, x, y);
+
+		if (val == newVal){
+			modify(result, x, y, 0);
+		} else {
+			modify(result, x, y, 1);
+		}
+
+		x = x + 1;
+	}
+
+	y = y + 1;
+}
+
+x = 0;
+y = 0;
+
+while(y < 101){
+	x = 0;
+
+	while(x < 101){
+
+		val = access(result, x, y);
+		newVal = access(rightTriangle, x, y);
+
+		if (val == newVal){
+			modify(result, x, y, 0);
+		} else {
+			modify(result, x, y, 1);
+		}
+
+		x = x + 1;
+	}
+
+	y = y + 1;
+}
+
+x = 0;
+y = 0;
+
+while(y < 101){
+	x = 0;
+
+	while(x < 101){
+
+		val = access(result, x, y);
+		newVal = access(downTriangle, x, y);
+
+		if (val == newVal){
+			modify(result, x, y, 0);
+		} else {
+			modify(result, x, y, 1);
+		}
+
+		x = x + 1;
+	}
+
+	y = y + 1;
+}
+
+//write(result);
+
+//////////////////////////////////////////////////////////// Creating the output ///////////////////////////////////////////////
+
+Tile t1;
+Tile blankT1;
+Tile newRow;
+Tile newArena;
+
+Int newX;
+Int newY;
+Int heightT1;
+Int widthT1;
+
+Int heightBT;
+Int widthBT;
+
+Int tileX;
+Int tileY;
+Int tileVal;
+
+Int oldWorldVal;
+
+t1 = read("tile1.tl");
+heightT1 = getRow(t1);
+widthT1 = getCol(t1);
+
+blankT1 = blank(t1);
+heightBT = getCol(blankT1);
+widthBT = getRow(blankT1);
+
+newRow = alternate(blankT1, alternate(blankT1, blankT1, 49), 0);
+newArena = newRow;
+
+i = 0;
+while (i < 100){
+	newArena = stack(newArena, newRow);
+	i = i + 1;
+}
+
+newX = 0;
+newY = 0;
+
+while(newY < 101*heightT1){
+
+	newX = 0;
+
+	while(newX < 101*widthT1){
+
+		oldWorldVal = access(result, newX / widthT1, newY / heightT1);
+
+		if(oldWorldVal == 1){
+			
+			tileX = 0;
+			tileY = 0;
+
+			while(tileY < heightT1){
+				tileX = 0;
+
+				while(tileX < widthT1){
+					tileVal = access(t1, tileX, tileY);
+					modify(newArena, newX + tileX, newY + tileY, tileVal);
+
+					tileX = tileX + 1;
+				}
+
+				tileY = tileY + 1;
+			}
+
+		} else {
+			tileX = 0;
+			tileY = 0;
+
+			while(tileY < heightBT){
+				tileX = 0;
+				while(tileX < widthBT){
+					modify(newArena, newX + tileX, newY + tileY, 0);
+					tileX = tileX + 1;
+				}
+
+				tileY = tileY + 1;
+			}
+		}
+
+		newX = newX + widthT1;
+	}
+
+	newY = newY + heightT1;
+}
+
+write(newArena);
+
+ 

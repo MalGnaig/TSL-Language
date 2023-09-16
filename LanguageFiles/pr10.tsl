@@ -1,0 +1,68 @@
+Tile t1;
+Tile t2;
+Tile cigTile;
+
+Int x;
+Int y;
+Int val;
+
+Int offsetX;
+Int offsetY;
+
+Int heightBT;
+Int widthBT;
+
+t1 = read("tile1.tl");
+t2 = read("tile2.tl");
+
+cigTile = blank(t1);
+
+heightBT = getRow(cigTile);
+widthBT = getCol(cigTile);
+
+x = 0;
+y = 0;
+
+while (y < heightBT){
+	x = 0;
+
+	if(y >= 12 && y < 17) {
+
+		while(x < widthBT) {
+			if(x >= 12 && x < 17){
+				val = access(t2, x - 12 , y - 12);
+				modify(cigTile, x, y, val);
+			}
+
+			x = x + 1;
+		}
+	}
+
+	y = y + 1;
+}
+
+x = 0;
+y = 0;
+
+while (y < heightBT){
+	x = 0;
+
+	if(y >= 12 && y < 17) {
+
+		while(x < widthBT) {
+			if(x >= 12 && x < 17){
+				val = access(cigTile, x, y);
+				modify(t1, x, y, val);
+			}
+
+			x = x + 1;
+		}
+	}
+
+	y = y + 1;
+
+}
+
+
+
+write(t1);
